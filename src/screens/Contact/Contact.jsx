@@ -12,7 +12,6 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [loading, setLoading] = useState(true);
 
   //functions
 
@@ -27,13 +26,18 @@ const Contact = () => {
   //submitHandler
   const submitHandler = (e) => {
     e.preventDefault();
+    document
+      .querySelector(".image-container")
+      .classList.toggle("bring-it-back");
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact-form", ...objToSend }),
     })
       .then(() => {
-        setLoading(false);
+        document
+          .querySelector(".image-container")
+          .classList.toggle("bring-it-back");
         document.querySelector(".form-section form button").style.background =
           "green";
         toast.success("Your Message Was Submitted Successfully", {
@@ -113,7 +117,9 @@ const Contact = () => {
               ></textarea>
             </div>
             <button>SEND</button>
-            {loading ? <img src="images/loading.gif" alt="" /> : ""}
+            <div className="form-elem image-container">
+              <img src="images/loading.gif" alt="" />
+            </div>
           </form>
         </div>
       </div>

@@ -17,6 +17,8 @@
         }
       }
       form {
+        position: relative;
+
         padding-top: 30px;
         display: flex;
         flex-direction: column;
@@ -85,12 +87,27 @@
             background-color: green;
           }
         }
+        .image-container {
+          display: none;
+          width: 60%;
+          text-align: center;
+          @include tablet {
+            width: 100%;
+          }
+          img {
+            width: 50px;
+          }
+        }
       }
     }
   }
 
   .show {
     height: 180px;
+  }
+
+  .bring-it-back {
+    display: inline-block;
   }
 
   .invalid {
