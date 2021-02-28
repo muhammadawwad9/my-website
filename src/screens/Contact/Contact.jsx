@@ -45,7 +45,6 @@ const Contact = () => {
                 type="text"
                 id="name"
                 name="name"
-                onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
                 required
               />
@@ -57,7 +56,6 @@ const Contact = () => {
                 type="email"
                 id="email"
                 name="email"
-                onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
                 required
               />
@@ -70,7 +68,6 @@ const Contact = () => {
                 id="message"
                 name="message"
                 required
-                onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
               ></textarea>
             </div>
