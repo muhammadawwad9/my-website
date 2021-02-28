@@ -1,0 +1,43 @@
+@import "./colors.scss";
+@import "./media-queries.scss";
+
+%screen-set {
+  min-height: 100vh;
+  background-color: $screen-bg-color;
+  .header-area {
+    background-color: $header-area-color;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    h1 {
+      font-size: 32px;
+      font-weight: 400;
+      padding: 0px 7px;
+      position: relative;
+    }
+    h1:before {
+      content: "";
+      border-left: 4px solid $light-blue;
+      position: absolute;
+      height: 100%;
+      right: 100%;
+      transform: translateX(100%);
+    }
+    @include small-screen {
+      & {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+%divs-padding-set {
+  > div {
+    padding: 0px 12%;
+  }
+  @include medium-screen {
+    > div {
+      padding: 0px 6%;
+    }
+  }
+}

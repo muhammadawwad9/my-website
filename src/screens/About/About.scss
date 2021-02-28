@@ -1,0 +1,86 @@
+@import "../../utils/reusable.scss";
+@import "../../utils/media-queries.scss";
+@import "../../utils/colors.scss";
+
+.About {
+  @extend %screen-set;
+  .about-me {
+    @extend %divs-padding-set;
+
+    h2 {
+      font-size: 14px;
+      color: $light-gray;
+    }
+    p {
+      font-weight: lighter;
+    }
+    .about-awwad {
+      padding-top: 60px;
+      font-family: "Open Sans";
+      .section {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0px;
+
+        .left-side {
+          width: 40%;
+          line-height: 1.7;
+
+          h2.hobbies {
+            font-weight: normal;
+          }
+        }
+
+        img {
+          width: 400px;
+          height: 300px;
+        }
+        @include tablet {
+          flex-direction: column;
+          padding-bottom: 20px;
+          .left-side {
+            width: 100%;
+            padding-bottom: 20px;
+          }
+          img {
+            align-self: center;
+          }
+        }
+
+        @include small-screen {
+          img {
+            width: 350px;
+            height: 250px;
+          }
+        }
+        @include smaller-screen {
+          img {
+            width: 240px;
+            height: 140px;
+          }
+        }
+      }
+    }
+  }
+  .show {
+    height: 180px;
+  }
+}
+
+@keyframes fill-up {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes vanish {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

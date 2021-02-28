@@ -1,0 +1,75 @@
+@import "../../utils/colors.scss";
+@import "../../utils/media-queries.scss";
+@import "../../utils/reusable.scss";
+
+.Header {
+  @include medium-screen {
+    padding: 0 6%;
+  }
+  background-color: $dark-gray;
+  color: $lighter-gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0px 12%;
+  .pages-links {
+    z-index: 200;
+    align-self: stretch;
+    display: flex;
+
+    .nav-link {
+      padding: 25px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease-in-out;
+      &:visited {
+        color: $lighter-gray;
+      }
+
+      &:hover {
+        background-color: $medium-gray;
+        color: #fff;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        height: 22px;
+        position: absolute;
+        border-left: 1px dotted #424346;
+        left: 100%;
+        bottom: 25px;
+      }
+    }
+    .active-link {
+      background-color: #fff !important;
+      color: $light-gray !important;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .fas {
+    z-index: 500;
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .logo {
+    img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+}

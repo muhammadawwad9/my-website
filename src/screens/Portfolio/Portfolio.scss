@@ -1,0 +1,154 @@
+@import "../../utils/reusable.scss";
+
+.Portfolio {
+  @extend %screen-set;
+
+  .my-portfolio {
+    @extend %divs-padding-set;
+
+    .projects {
+      padding-top: 30px;
+      h2 {
+        font-size: 25px;
+        color: #000;
+        text-align: center;
+        font-weight: 400;
+      }
+      .cards {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        .none {
+          display: none;
+        }
+        @include tablet {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+        }
+        .project {
+          position: relative;
+
+          h3 {
+            color: $light-blue;
+            font-weight: bolder;
+            text-align: center;
+            cursor: pointer;
+            a {
+              text-decoration: none;
+              &:visited {
+                color: $light-blue;
+              }
+            }
+          }
+
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          width: 45%;
+          padding: 8px 8px;
+          row-gap: 2px;
+          @include tablet {
+            width: 100%;
+          }
+          .project-image {
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            .overlay {
+              visibility: hidden;
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              opacity: 0.6;
+              z-index: 900;
+              transition-property: all;
+              transition-duration: 0.3s;
+            }
+
+            .work-in-progress {
+              visibility: hidden;
+              position: absolute;
+              z-index: 950;
+              left: 50%;
+              transform: translateX(-50%);
+              top: 5px;
+              color: red;
+              font-size: 40px;
+              text-shadow: 2px 2px #000;
+            }
+            a {
+              text-decoration: none;
+            }
+            a:nth-of-type(2) {
+              button {
+                background-color: #ffcc00;
+                left: 100%;
+                top: 61%;
+              }
+            }
+            a {
+              button {
+                visibility: hidden;
+                position: absolute;
+                left: 0%;
+                top: 40%;
+                transform: translate(-50%, -50%) rotateX(90deg);
+                z-index: 950;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                padding: 6px;
+                font-size: 18px;
+                background-color: $light-blue;
+                color: $light-gray;
+                font-weight: bold;
+                transition-property: all;
+                transition-duration: 0.2s;
+                transition-timing-function: linear;
+                overflow: hidden;
+
+                &:hover:enabled {
+                  color: $light-blue;
+                  background-color: #000;
+                }
+                @include small-screen {
+                  display: none;
+                }
+              }
+            }
+
+            &:hover {
+              .overlay {
+                background-color: #000;
+                visibility: visible;
+              }
+              .work-in-progress {
+                visibility: visible;
+              }
+              a {
+                button {
+                  visibility: visible;
+                  left: 50%;
+                  transform: translate(-50%, -50%) rotateX(0deg);
+                }
+              }
+            }
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .show {
+    height: 180px;
+  }
+}

@@ -1,0 +1,34 @@
+@import "../../utils/colors.scss";
+@import "../../utils/media-queries.scss";
+@import "../../utils/reusable.scss";
+
+.MobileMenu {
+  visibility: hidden;
+  @include tablet {
+    visibility: visible;
+    height: 0px;
+    overflow: hidden;
+    transition-property: height;
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background-color: $medium-gray;
+    display: flex;
+    flex-direction: column;
+    .nav-link-mobile {
+      transition-property: all;
+      transition-duration: 0.3s;
+      border-bottom: 1px solid #353535;
+      text-align: center;
+      text-decoration: none;
+      padding: 10px 0px;
+      &:visited {
+        color: $lighter-gray;
+      }
+      &:hover {
+        background-color: $dark-gray;
+      }
+    }
+  }
+}

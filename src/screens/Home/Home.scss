@@ -1,0 +1,50 @@
+@import "../../utils/colors.scss";
+.Home {
+  background-color: $bg-color;
+  height: 100vh;
+  color: #fff;
+
+  .details {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 55px;
+    align-items: center;
+    .profile-pic {
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      border: 7px solid #fff;
+    }
+    h3 {
+      font-weight: lighter;
+      font-size: 22px;
+    }
+    .links {
+      display: flex;
+      align-self: center;
+      justify-content: space-around;
+      width: 230px;
+
+      .fab {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 12px;
+        cursor: pointer;
+        transition-property: all;
+        transition-duration: 0.3s;
+        border-radius: 50%;
+        color: #fff;
+        background-color: $light-blue;
+      }
+      .fab:hover {
+        background: transparent;
+        color: $light-blue;
+      }
+    }
+  }
+  .show {
+    height: 180px;
+  }
+}
