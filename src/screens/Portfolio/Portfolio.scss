@@ -77,17 +77,6 @@
               transition-duration: 0.3s;
             }
 
-            .work-in-progress {
-              visibility: hidden;
-              position: absolute;
-              z-index: 950;
-              left: 50%;
-              transform: translateX(-50%);
-              top: 5px;
-              color: red;
-              font-size: 40px;
-              text-shadow: 2px 2px #000;
-            }
             a {
               text-decoration: none;
             }

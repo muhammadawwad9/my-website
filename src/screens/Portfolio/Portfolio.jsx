@@ -43,7 +43,6 @@ const Portfolio = () => {
             </div>
             <div className="project">
               <div className="project-image">
-                <h2 className="work-in-progress">Work In Progress</h2>
                 <div className="overlay"></div>
                 <a
                   href="https://cranky-babbage-f1c5b5.netlify.app"
