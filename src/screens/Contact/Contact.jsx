@@ -61,6 +61,7 @@ const Contact = () => {
         <div className="form-section">
           <h2>DROP ME A MESSAGE</h2>
           <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="contact" value="contact" />
             <div className="form-elem">
               <label htmlFor="name">Your Name</label>
               <br />
