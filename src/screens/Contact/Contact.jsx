@@ -14,7 +14,6 @@ const Contact = () => {
   });
 
   //functions
-
   //submitHandler
   const submitHandler = (e) => {
     const localServer = "http://localhost:4000/";
