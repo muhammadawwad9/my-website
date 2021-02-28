@@ -20,7 +20,7 @@ const Contact = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(objToSend),
+      body: JSON.stringify({ "form-name": "contact-form", objToSend }),
     })
       .then(() => alert("Success!"))
       .catch((error) => alert(error));
