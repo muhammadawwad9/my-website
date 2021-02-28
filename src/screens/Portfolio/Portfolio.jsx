@@ -62,7 +62,9 @@ const Portfolio = () => {
                 <img src="images/ecommerce.jpg" alt="" />
               </div>
               <h3>
-                <a href="#">ECommerce Web Shop</a>
+                <a href="#">
+                  ECommerce Web Shop <span>(WORK IN PROGRESS)</span>
+                </a>
               </h3>
             </div>
           </div>

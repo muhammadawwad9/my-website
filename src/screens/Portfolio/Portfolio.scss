@@ -38,6 +38,10 @@
             text-align: center;
             cursor: pointer;
             a {
+              span {
+                color: red;
+                font-weight: bold;
+              }
               color: $light-blue;
               text-decoration: none;
               &:visited {
