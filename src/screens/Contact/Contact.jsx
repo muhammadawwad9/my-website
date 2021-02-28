@@ -16,15 +16,26 @@ const Contact = () => {
   //functions
   //submitHandler
   const submitHandler = (e) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", objToSend }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
-
+    const localServer = "http://localhost:4000/";
+    const heroku = "https://muhammad-awwad-website-api.herokuapp.com/";
     e.preventDefault();
+    fetch(`${localServer}form-submission`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(objToSend),
+    })
+      .then(() => {
+        document.querySelector(".form-section form button").style.background =
+          "green";
+        toast.success("Your Message Was Submitted Successfully", {
+          position: toast.POSITION.BOTTOM_CENTER,
+        });
+      })
+      .catch(() => {
+        toast.error("Something Went Wrong, Try Again Later!", {
+          position: toast.POSITION.BOTTOM_CENTER,
+        });
+      });
   };
 
   //changeHandler
@@ -58,6 +69,7 @@ const Contact = () => {
                 id="name"
                 onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
+                value="contact"
                 required
               />
             </div>
@@ -69,6 +81,7 @@ const Contact = () => {
                 id="email"
                 onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
+                value="contact"
                 required
               />
             </div>
@@ -81,6 +94,7 @@ const Contact = () => {
                 required
                 onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
+                value="contact"
               ></textarea>
             </div>
             <button>SEND</button>
