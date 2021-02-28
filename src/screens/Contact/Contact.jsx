@@ -6,14 +6,36 @@ import Header from "../../components/Header/Header";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 
 const Contact = () => {
+  //states
+  const [objToSend, setObjToSend] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   //functions
   //submitHandler
   const submitHandler = (e) => {
     e.preventDefault();
-    document.querySelector(".form-section form button").style.background =
-      "green";
-    toast.success("Your Message Was Submitted Successfully", {
-      position: toast.POSITION.BOTTOM_CENTER,
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(objToSend),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+  };
+  // document.querySelector(".form-section form button").style.background =
+  //   "green";
+  // toast.success("Your Message Was Submitted Successfully", {
+  //   position: toast.POSITION.BOTTOM_CENTER,
+  // });
+
+  //changeHandler
+  const changeHandler = (e) => {
+    setObjToSend((prev) => {
+      const updatedObj = { ...prev, [e.target.id]: e.target.value };
+      return updatedObj;
     });
   };
 
@@ -45,6 +67,7 @@ const Contact = () => {
                 type="text"
                 id="name"
                 name="name"
+                onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
                 required
               />
@@ -56,6 +79,7 @@ const Contact = () => {
                 type="email"
                 id="email"
                 name="email"
+                onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
                 required
               />
@@ -68,10 +92,11 @@ const Contact = () => {
                 id="message"
                 name="message"
                 required
+                onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
               ></textarea>
             </div>
-            <button>SEND</button>
+            <button type="submit">SEND</button>
           </form>
         </div>
       </div>
