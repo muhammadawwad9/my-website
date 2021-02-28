@@ -12,6 +12,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(true);
 
   //functions
 
@@ -29,16 +30,22 @@ const Contact = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact-form", objToSend }),
+      body: encode({ "form-name": "contact-form", ...objToSend }),
     })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
+      .then(() => {
+        setLoading(false);
+        document.querySelector(".form-section form button").style.background =
+          "green";
+        toast.success("Your Message Was Submitted Successfully", {
+          position: toast.POSITION.BOTTOM_CENTER,
+        });
+      })
+      .catch((error) => {
+        toast.error("Something Went Wrong! Try Again Later", {
+          position: toast.POSITION.BOTTOM_CENTER,
+        });
+      });
   };
-  // document.querySelector(".form-section form button").style.background =
-  //   "green";
-  // toast.success("Your Message Was Submitted Successfully", {
-  //   position: toast.POSITION.BOTTOM_CENTER,
-  // });
 
   //changeHandler
   const changeHandler = (e) => {
@@ -105,7 +112,8 @@ const Contact = () => {
                 onInvalid={(e) => invalid(e)}
               ></textarea>
             </div>
-            <button type="submit">SEND</button>
+            <button>SEND</button>
+            {loading ? <img src="images/loading.gif" alt="" /> : ""}
           </form>
         </div>
       </div>
