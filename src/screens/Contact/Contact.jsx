@@ -67,9 +67,9 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
+                name="form-name"
                 onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
-                value="contact"
                 required
               />
             </div>
@@ -79,9 +79,9 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
+                name="form-email"
                 onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
-                value="contact"
                 required
               />
             </div>
@@ -91,10 +91,10 @@ const Contact = () => {
               <br />
               <textarea
                 id="message"
+                name="form-message"
                 required
                 onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
-                value="contact"
               ></textarea>
             </div>
             <button>SEND</button>
