@@ -18,7 +18,7 @@ const Contact = () => {
   //submitHandler
   const submitHandler = (e) => {
     const localServer = "http://localhost:4000/";
-    const heroku = "https://muhammad-awwad-website-backend.herokuapp.com/";
+    const heroku = "https://muhammad-awwad-website-api.herokuapp.com/";
     e.preventDefault();
     fetch(`${heroku}form-submission`, {
       method: "POST",
