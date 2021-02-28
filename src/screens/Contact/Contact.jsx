@@ -6,43 +6,14 @@ import Header from "../../components/Header/Header";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 
 const Contact = () => {
-  //states
-  const [objToSend, setObjToSend] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
   //functions
   //submitHandler
   const submitHandler = (e) => {
-    const localServer = "http://localhost:4000/";
-    const heroku = "https://muhammad-awwad-website-api.herokuapp.com/";
     e.preventDefault();
-    fetch(`${localServer}form-submission`, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(objToSend),
-    })
-      .then(() => {
-        document.querySelector(".form-section form button").style.background =
-          "green";
-        toast.success("Your Message Was Submitted Successfully", {
-          position: toast.POSITION.BOTTOM_CENTER,
-        });
-      })
-      .catch(() => {
-        toast.error("Something Went Wrong, Try Again Later!", {
-          position: toast.POSITION.BOTTOM_CENTER,
-        });
-      });
-  };
-
-  //changeHandler
-  const changeHandler = (e) => {
-    setObjToSend((prev) => {
-      const updatedObj = { ...prev, [e.target.id]: e.target.value };
-      return updatedObj;
+    document.querySelector(".form-section form button").style.background =
+      "green";
+    toast.success("Your Message Was Submitted Successfully", {
+      position: toast.POSITION.BOTTOM_CENTER,
     });
   };
 
@@ -60,7 +31,12 @@ const Contact = () => {
         </div>
         <div className="form-section">
           <h2>DROP ME A MESSAGE</h2>
-          <form name="contact-form" method="POST" data-netlify="true">
+          <form
+            name="contact-form"
+            method="POST"
+            data-netlify="true"
+            onSubmit={(e) => submitHandler(e)}
+          >
             <input type="hidden" name="form-name" value="contact-form" />
             <div className="form-elem">
               <label htmlFor="name">Your Name</label>
@@ -98,7 +74,7 @@ const Contact = () => {
                 onInvalid={(e) => invalid(e)}
               ></textarea>
             </div>
-            <button type="submit">SEND</button>
+            <button>SEND</button>
           </form>
         </div>
       </div>
