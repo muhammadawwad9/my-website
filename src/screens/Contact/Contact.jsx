@@ -19,7 +19,7 @@ const Contact = () => {
     const localServer = "http://localhost:4000/";
     const heroku = "https://muhammad-awwad-website-api.herokuapp.com/";
     e.preventDefault();
-    fetch(`${heroku}form-submission`, {
+    fetch(`${localServer}form-submission`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(objToSend),
@@ -60,7 +60,7 @@ const Contact = () => {
         </div>
         <div className="form-section">
           <h2>DROP ME A MESSAGE</h2>
-          <form onSubmit={(e) => submitHandler(e)}>
+          <form name="contact" method="POST" data-netlify="true">
             <div className="form-elem">
               <label htmlFor="name">Your Name</label>
               <br />

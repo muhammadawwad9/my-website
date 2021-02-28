@@ -132,6 +132,9 @@
               }
               .work-in-progress {
                 visibility: visible;
+                @include small-screen {
+                  display: none;
+                }
               }
               a {
                 button {
