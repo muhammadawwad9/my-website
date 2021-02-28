@@ -60,12 +60,7 @@ const Contact = () => {
         </div>
         <div className="form-section">
           <h2>DROP ME A MESSAGE</h2>
-          <form
-            name="contact"
-            method="POST"
-            action="/contact"
-            data-netlify="true"
-          >
+          <form name="contact" method="POST" action="/contact">
             <div className="form-elem">
               <label htmlFor="name">Your Name</label>
               <br />
