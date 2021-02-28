@@ -60,14 +60,14 @@ const Contact = () => {
         </div>
         <div className="form-section">
           <h2>DROP ME A MESSAGE</h2>
-          <form name="contact" method="POST" action="/contact">
+          <form name="contact" method="POST" data-netlify="true">
             <div className="form-elem">
               <label htmlFor="name">Your Name</label>
               <br />
               <input
                 type="text"
                 id="name"
-                name="form-name"
+                name="name"
                 onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
                 required
@@ -79,7 +79,7 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
-                name="form-email"
+                name="email"
                 onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
                 required
@@ -91,13 +91,13 @@ const Contact = () => {
               <br />
               <textarea
                 id="message"
-                name="form-message"
+                name="message"
                 required
                 onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
               ></textarea>
             </div>
-            <button>SEND</button>
+            <button type="submit">SEND</button>
           </form>
         </div>
       </div>
