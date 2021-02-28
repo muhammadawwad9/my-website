@@ -14,13 +14,22 @@ const Contact = () => {
   });
 
   //functions
+
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   //submitHandler
   const submitHandler = (e) => {
     e.preventDefault();
     fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ "form-name": "contact-form", objToSend }),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact-form", objToSend }),
     })
       .then(() => alert("Success!"))
       .catch((error) => alert(error));
