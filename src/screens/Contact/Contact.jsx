@@ -31,7 +31,11 @@ const Contact = () => {
           position: toast.POSITION.BOTTOM_CENTER,
         });
       })
-      .catch(() => alert("something went wrong!"));
+      .catch(() => {
+        toast.error("Something Went Wrong, Try Again Later!", {
+          position: toast.POSITION.BOTTOM_CENTER,
+        });
+      });
   };
 
   //changeHandler
