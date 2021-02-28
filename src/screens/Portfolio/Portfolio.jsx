@@ -30,7 +30,7 @@ const Portfolio = () => {
                   href="https://github.com/muhammadawwad9/barber-appointment-frontend"
                   target="_blank"
                 >
-                  <button>View Source Code</button>
+                  <button>View Code</button>
                 </a>
 
                 <img src="images/barber-appointment.jpg" alt="" />
@@ -54,7 +54,7 @@ const Portfolio = () => {
                 </a>
                 <a href="#" target="_blank">
                   <button style={{ opacity: "0.6" }} disabled>
-                    View Source Code
+                    View Code
                   </button>
                 </a>
 
