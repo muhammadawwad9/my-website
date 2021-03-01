@@ -5,18 +5,6 @@ import Header from "../../components/Header/Header";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 
 const Portfolio = () => {
-  //useEffect
-  // useEffect(() => {
-  //   window.addEventListener("resize", (e) => {
-  //     if (e.target.innerWidth < 1120) {
-  //       const wantedLinkTags=Array.from(document.getElementsByClassName("image-link"));
-  //       wantedLinkTags.forEach(link=>{
-  //         const href=link.parentElement.firstElementChild;
-  //       })
-  //       console.log(document.querySelector(".image-link").hrefparentElement);
-  //     }
-  //   });
-  // }, []);
   return (
     <div className="Portfolio">
       <Header />
