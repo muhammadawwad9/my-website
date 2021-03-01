@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Portfolio.scss";
 
 import Header from "../../components/Header/Header";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 
 const Portfolio = () => {
+  //useEffect
+  // useEffect(() => {
+  //   window.addEventListener("resize", (e) => {
+  //     if (e.target.innerWidth < 1120) {
+  //       const wantedLinkTags=Array.from(document.getElementsByClassName("image-link"));
+  //       wantedLinkTags.forEach(link=>{
+  //         const href=link.parentElement.firstElementChild;
+  //       })
+  //       console.log(document.querySelector(".image-link").hrefparentElement);
+  //     }
+  //   });
+  // }, []);
   return (
     <div className="Portfolio">
       <Header />
@@ -33,10 +45,19 @@ const Portfolio = () => {
                   <button>View Code</button>
                 </a>
 
-                <img src="images/barber-appointment.jpg" alt="" />
+                <a
+                  href="https://cranky-babbage-f1c5b5.netlify.app"
+                  target="_blank"
+                  className="image-link"
+                >
+                  <img src="images/barber-appointment.jpg" alt="" />
+                </a>
               </div>
               <h3>
-                <a href="https://cranky-babbage-f1c5b5.netlify.app">
+                <a
+                  href="https://cranky-babbage-f1c5b5.netlify.app"
+                  target="_blank"
+                >
                   Barber Appointment Website
                 </a>
               </h3>
@@ -58,10 +79,12 @@ const Portfolio = () => {
                   </button>
                 </a>
 
-                <img src="images/ecommerce.jpg" alt="" />
+                <a target="_blank" className="image-link">
+                  <img src="images/ecommerce.jpg" alt="" />
+                </a>
               </div>
               <h3>
-                <a href="#">
+                <a href="#" target="_blank">
                   ECommerce Web Shop <span>(WORK IN PROGRESS)</span>
                 </a>
               </h3>

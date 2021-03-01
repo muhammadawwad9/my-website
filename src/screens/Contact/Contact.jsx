@@ -73,20 +73,13 @@ const Contact = () => {
         </div>
         <div className="form-section">
           <h2>DROP ME A MESSAGE</h2>
-          <form
-            name="contact-form"
-            method="POST"
-            data-netlify="true"
-            onSubmit={(e) => submitHandler(e)}
-          >
-            <input type="hidden" name="form-name" value="contact-form" />
+          <form name="contact-form" onSubmit={(e) => submitHandler(e)}>
             <div className="form-elem">
               <label htmlFor="name">Your Name</label>
               <br />
               <input
                 type="text"
                 id="name"
-                name="name"
                 onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
                 required
@@ -98,7 +91,6 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
-                name="email"
                 onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}
                 required
@@ -110,7 +102,6 @@ const Contact = () => {
               <br />
               <textarea
                 id="message"
-                name="message"
                 required
                 onChange={(e) => changeHandler(e)}
                 onInvalid={(e) => invalid(e)}

@@ -6,6 +6,9 @@
   @include medium-screen {
     padding: 0 6%;
   }
+  @include tablet {
+    padding: 0;
+  }
   background-color: $dark-gray;
   color: $lighter-gray;
   display: flex;
