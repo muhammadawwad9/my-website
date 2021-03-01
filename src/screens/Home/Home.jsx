@@ -15,19 +15,19 @@ const Home = () => {
         <h1>Muhammad Awwad</h1>
         <h3>Full Stack Web Developer</h3>
         <div class="links">
-          <a href="#" target="_blank">
+          <a href="https://www.linkedin.com/in/muhammadawwad9/" target="_blank">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="#" target="_blank">
-            {" "}
+          <a href="https://github.com/muhammadawwad9" target="_blank">
             <i class="fab fa-github"></i>
           </a>
-          <a href="#" target="_blank">
-            {" "}
+          <a
+            href="https://www.facebook.com/Muhammad.Ali.Awwad/"
+            target="_blank"
+          >
             <i class="fab fa-facebook"></i>
           </a>
-          <a href="#" target="_blank">
-            {" "}
+          <a href="https://www.instagram.com/muhammadawwad9/" target="_blank">
             <i class="fab fa-instagram"></i>
           </a>
         </div>

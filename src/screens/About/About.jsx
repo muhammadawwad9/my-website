@@ -59,13 +59,14 @@ const About = () => {
               <h2>PROFESSIONALY</h2>
               <p>
                 My name is Muhammad Awwad, 21 years old from Israel,Tamra ,
-                highly motivated developer and fast learner. I completed a
-                16-weeks Full Stack Bootcamp at <i>Founders and Coders</i> in
-                Haifa, and I'm seeking to launch a career developing web
-                applications. I always liked to create things from my own, I can
-                work independently and also with a team, and always hungry to
-                learn new technologies. I love what I do, and I enjoy/embrace
-                each new project I become a part of.
+                highly motivated developer and fast learner. I completed a fully
+                intensive 16-weeks Full Stack Bootcamp at
+                <i>Founders and Coders</i> in Haifa, and I'm seeking to launch a
+                career developing web applications. I'm always hungry to learn
+                new technologies and to build things from my own. I can work
+                independently and also with a team. Coding makes me feel great,
+                I really love what I do, and I enjoy/embrace each new project I
+                become a part of.
               </p>
             </div>
             <img src="images/coding.jpg" alt="Coding" />
@@ -78,9 +79,9 @@ const About = () => {
                 Aside from coding and developing, I am a basketball player.
                 Basketball is an important part in my life, I grew up playing
                 basketball for different teams, and in these days, in my free
-                time I play basketball with friends, this really makes me feel
-                fresh and full of positive energy, so I come back fresher and
-                continue my work in an Efficient way.
+                time I play basketball with friends, this makes me feel amazing
+                and full of positive energy, also helps me to come back fresher
+                and continue my work in an Efficient way.
               </p>
             </div>
             <img
