@@ -21,6 +21,40 @@ const Portfolio = () => {
               <div className="project-image">
                 <div className="overlay"></div>
                 <a
+                  href="https://festive-saha-d99c2d.netlify.app/"
+                  target="_blank"
+                >
+                  <button>View Project</button>
+                </a>
+                <a
+                  href="https://github.com/muhammadawwad9/chat-app-frontend"
+                  target="_blank"
+                >
+                  <button>View Code</button>
+                </a>
+
+                <a
+                  href="https://festive-saha-d99c2d.netlify.app/"
+                  target="_blank"
+                  className="image-link"
+                >
+                  <img src="images/chat-app.JPG" alt="" />
+                </a>
+              </div>
+              <h3>
+                <a
+                  href="https://festive-saha-d99c2d.netlify.app/"
+                  target="_blank"
+                >
+                  Chat App
+                </a>
+              </h3>
+            </div>
+
+            <div className="project">
+              <div className="project-image">
+                <div className="overlay"></div>
+                <a
                   href="https://cranky-babbage-f1c5b5.netlify.app"
                   target="_blank"
                 >
