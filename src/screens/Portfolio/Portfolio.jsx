@@ -58,39 +58,6 @@ const Portfolio = () => {
                   href="https://cranky-babbage-f1c5b5.netlify.app"
                   target="_blank"
                 >
-                  <button>View Project</button>
-                </a>
-                <a
-                  href="https://github.com/muhammadawwad9/barber-appointment-frontend"
-                  target="_blank"
-                >
-                  <button>View Code</button>
-                </a>
-
-                <a
-                  href="https://cranky-babbage-f1c5b5.netlify.app"
-                  target="_blank"
-                  className="image-link"
-                >
-                  <img src="images/barber-appointment.jpg" alt="" />
-                </a>
-              </div>
-              <h3>
-                <a
-                  href="https://cranky-babbage-f1c5b5.netlify.app"
-                  target="_blank"
-                >
-                  Barber Appointment Website
-                </a>
-              </h3>
-            </div>
-            <div className="project">
-              <div className="project-image">
-                <div className="overlay"></div>
-                <a
-                  href="https://cranky-babbage-f1c5b5.netlify.app"
-                  target="_blank"
-                >
                   <button style={{ opacity: "0.6" }} disabled>
                     View Project
                   </button>
@@ -106,7 +73,7 @@ const Portfolio = () => {
                 </a>
               </div>
               <h3>
-                <a href="#" target="_blank">
+                <a href="" target="">
                   ECommerce Web Shop <span>(WORK IN PROGRESS)</span>
                 </a>
               </h3>
