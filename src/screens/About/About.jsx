@@ -8,9 +8,10 @@ import Activities from "../../components/Activities/Activities";
 
 const About = () => {
   //states
-  const [animationed, setAnimationed] = useState(
-    0
-  ); /*This state in order to check if the whole animation process is finished, and when it ends I will remove the class that makes the animation for each tag and bring it back so we have the animation again :)*/
+  const [animationed, setAnimationed] =
+    useState(
+      0
+    ); /*This state in order to check if the whole animation process is finished, and when it ends I will remove the class that makes the animation for each tag and bring it back so we have the animation again :)*/
 
   //useEffect
   useEffect(() => {
@@ -68,19 +69,19 @@ const About = () => {
                 and fast learner. I finished an intensive 16-weeks Full Stack
                 Bootcamp at
                 <i> Founders and Coders</i> in Haifa, Israel. Currently I'm
-                seeking to launch a career in web development. I'm always hungry
-                to learn new technologies and to build things on my own. I can
-                work independently and also with a team. Coding makes me feel
-                great, I really love what I do, and I enjoy/embrace each new
-                project I become a part of.
+                seeking to launch a career in web development. I'm always
+                striving to learn new technologies and to build interesting
+                projects. I can work independently and also with a team. Coding
+                makes me feel great, I really love what I do, and I
+                enjoy/embrace each new project I become a part of.
               </p>
             </div>
             <img src="images/coding.jpg" alt="Coding" />
           </div>
           <div className="section">
-            <div class="left-side">
+            <div className="left-side">
               <h2>PERSONALLY</h2>
-              <h2 class="hobbies">Hobbies / Interests</h2>
+              <h2 className="hobbies">Hobbies / Interests</h2>
               <p>
                 Aside from coding and developing, I am a basketball player.
                 Basketball is an important part of my life, I grew up playing

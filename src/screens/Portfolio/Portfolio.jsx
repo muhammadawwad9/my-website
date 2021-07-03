@@ -19,22 +19,16 @@ const Portfolio = () => {
           <div className="cards">
             <div className="project">
               <div className="project-image">
-                <div className="overlay"></div>
                 <a
-                  href="https://festive-saha-d99c2d.netlify.app/"
+                  href="https://join-and-enjoy.netlify.app/"
                   target="_blank"
+                  className="overlay-link"
                 >
-                  <button>View Project</button>
-                </a>
-                <a
-                  href="https://github.com/muhammadawwad9/chat-app-frontend"
-                  target="_blank"
-                >
-                  <button>View Code</button>
+                  <div className="overlay"></div>
                 </a>
 
                 <a
-                  href="https://festive-saha-d99c2d.netlify.app/"
+                  href="https://join-and-enjoy.netlify.app/"
                   target="_blank"
                   className="image-link"
                 >
@@ -42,39 +36,33 @@ const Portfolio = () => {
                 </a>
               </div>
               <h3>
-                <a
-                  href="https://festive-saha-d99c2d.netlify.app/"
-                  target="_blank"
-                >
-                  Chat App
+                <a href="https://join-and-enjoy.netlify.app/" target="_blank">
+                  Live Chat Rooms
                 </a>
               </h3>
             </div>
 
             <div className="project">
               <div className="project-image">
-                <div className="overlay"></div>
                 <a
-                  href="https://cranky-babbage-f1c5b5.netlify.app"
+                  href="https://awgram.netlify.app/"
                   target="_blank"
+                  className="overlay-link"
                 >
-                  <button style={{ opacity: "0.6" }} disabled>
-                    View Project
-                  </button>
-                </a>
-                <a href="#" target="_blank">
-                  <button style={{ opacity: "0.6" }} disabled>
-                    View Code
-                  </button>
+                  <div className="overlay"></div>
                 </a>
 
-                <a target="_blank" className="image-link">
-                  <img src="images/ecommerce.jpg" alt="" />
+                <a
+                  href="https://awgram.netlify.app/"
+                  target="_blank"
+                  className="image-link"
+                >
+                  <img src="images/awgram.jpg" alt="" />
                 </a>
               </div>
               <h3>
-                <a href="" target="">
-                  ECommerce Web Shop <span>(WORK IN PROGRESS)</span>
+                <a href="https://awgram.netlify.app/" target="_blank">
+                  Awgram
                 </a>
               </h3>
             </div>

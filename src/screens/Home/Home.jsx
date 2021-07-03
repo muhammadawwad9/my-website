@@ -14,35 +14,24 @@ const Home = () => {
         <img src="images/me.jpg" alt="Muhammad Awwad" className="profile-pic" />
         <h1>Muhammad Awwad</h1>
         <h3>Full Stack Web Developer</h3>
-        <div class="links">
+        <div className="links">
           <a href="https://www.linkedin.com/in/muhammadawwad9/" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
+            <i className="fab fa-linkedin-in"></i>
           </a>
           <a href="https://github.com/muhammadawwad9" target="_blank">
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
           </a>
           <a
             href="https://www.facebook.com/Muhammad.Ali.Awwad/"
             target="_blank"
           >
-            <i class="fab fa-facebook"></i>
+            <i className="fab fa-facebook"></i>
           </a>
           <a href="https://www.instagram.com/muhammadawwad9/" target="_blank">
-            <i class="fab fa-instagram"></i>
+            <i className="fab fa-instagram"></i>
           </a>
         </div>
       </div>
-      {/* <div id="my-details">
-                <img class="profile-pic" src="./img/me.png">
-                <h1 id="name">Muhammad Awwad</h1>
-                <h3 id="job">Full Stack Web Developer</h3>
-                <div class="links">
-                    <a href="https://www.linkedin.com/login" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com/" target="_blank"> <i class="fab fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/" target="_blank"> <i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank"> <i class="fab fa-instagram"></i></a>
-                </div>
-            </div> */}
     </div>
   );
 };

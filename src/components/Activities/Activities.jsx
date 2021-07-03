@@ -25,7 +25,7 @@ const Activities = () => {
         </h3>
       </div>
       <div className="icon-container">
-        <i class="fas fa-basketball-ball"></i>
+        <i className="fas fa-basketball-ball"></i>
         <h3 data-text="BASKETBALL" className="animate-BASKETBALL">
           BASKETBALL
         </h3>
